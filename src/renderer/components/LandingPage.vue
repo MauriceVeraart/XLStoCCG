@@ -5,9 +5,11 @@
       <div id="control">
         <div id="templateControl">
           <h4>template control</h4>
+           <VueCtkDateTimePicker v-model="datein" />
+           <h1 >{{new Date(datein).getTime()}}</h1>
           <input v-model="templateName"></input><br><br>
           <b-button class="btn-success button" @click="L3Din()" ><fa icon="play"></fa></b-button>
-          <b-button class="btn-danger button" @click="L3Duit()" ><fa icon="stop"></fa></b-button>
+          <b-button class="btn-dangr button" @click="L3Duit()" ><fa icon="stop"></fa></b-button>
           <b-button class="btn-warning button" @click="L3Dupdate()"><fa icon="pen"></fa> UPDATE</b-button>
         </div>
         <div id="excelControl">
@@ -48,11 +50,14 @@
 <script>
   import * as XLparser from '@/store/XLparser'
   import * as CCG from '../store/ccg'
+  import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
+  import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
 
   const { dialog } = require('electron').remote // voor laden saven naar file
 
   export default {
     name: 'landing-page',
+    components: { VueCtkDateTimePicker },
     methods: {
       loadit () {
         const fileName = dialog.showOpenDialog({ title: 'Load Excel File', filters: [ { name: 'FILE', extensions: ['xlsx'] } ] })
@@ -122,7 +127,8 @@
         horse: {},
         CCGip: '127.0.0.1',
         daSheet: '',
-        templateName: 'veiling/veiling'
+        templateName: 'veiling/veiling',
+        datein: ''
       }
     }
   }
