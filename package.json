@@ -68,7 +68,7 @@
     "jquery": "^3.4.1",
     "path": "^0.12.7",
     "process": "^0.11.10",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "superfly-timeline": "^7.2.4",
     "tslib": "^1.10.0",
     "vue": "^2.5.16",
