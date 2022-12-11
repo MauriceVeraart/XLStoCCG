@@ -63,7 +63,7 @@
     "bootstrap-vue": "^2.0.0-rc.27",
     "casparcg-connection": "^4.7.0",
     "convert-excel-to-json": "^1.6.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "http": "^0.0.0",
     "jquery": "^3.4.1",
     "path": "^0.12.7",
