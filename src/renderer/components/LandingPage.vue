@@ -5,9 +5,7 @@
       <div id="control">
         <div id="templateControl">
           <h4>template control</h4>
-           <VueCtkDateTimePicker v-model="datein" />
-           <h1 >{{new Date(datein).getTime()}}</h1>
-          <input v-model="templateName"></input><br><br>
+          <input v-model="templateName" /><br><br>
           <b-button class="btn-success button" @click="L3Din()" ><fa icon="play"></fa></b-button>
           <b-button class="btn-dangr button" @click="L3Duit()" ><fa icon="stop"></fa></b-button>
           <b-button class="btn-warning button" @click="L3Dupdate()"><fa icon="pen"></fa> UPDATE</b-button>
@@ -22,7 +20,7 @@
           <b-button class="btn-warning button" v-for="sheets in Object.keys(this.$store.state.raw)" @click="selectSheet(sheets)">{{sheets}}</b-button>
         </div>
         <div id="connectionControl">        
-          <input v-model="CCGip"></input>
+          <input v-model="CCGip"/>
           <b-button @click="Connect(CCGip)">CONNECT</b-button>
         </div>
       </div>
@@ -127,8 +125,7 @@
         horse: {},
         CCGip: '127.0.0.1',
         daSheet: '',
-        templateName: 'veiling/veiling',
-        datein: ''
+        templateName: 'template name'
       }
     }
   }
